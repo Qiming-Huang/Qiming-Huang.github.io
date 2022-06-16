@@ -113,7 +113,16 @@
 
                 <tr>
                   <td style="padding:20px;width:25%;vertical-align:middle">
-                    <img src='images/best_frame.png' width="190">
+                    <img id="nerve" src='images/best_frame.png' width="190" onmouseover="on_nerve()" onmouseout="out_nerve()">
+                    <script>
+                      function on_nerve(){
+                        document.getElementById("nerve").setAttribute("src", "images/nerve_over.png")
+                      }
+
+                      function out_nerve(){
+                        document.getElementById("nerve").setAttribute("src", "images/best_frame.png")
+                      }
+                    </script>
                   </td>
                   <td style="padding:20px;width:75%;vertical-align:middle">
                     <a href="">
@@ -186,7 +195,7 @@
             border="0" alt="Free Web Counters"></a>
             <br><a href="https://www.easycounter.com/">had visited</a>
         </div>
-        <p style="text-align:center;">Last update: June.03.2022</p>
+        <p style="text-align:center;">Last update: June.16.2022</p>
         <p style="text-align:center;">Stolen from <a href="https://jonbarron.info/">Jon Barron</a></p>
       </td>
     </tr>
