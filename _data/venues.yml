@@ -7,3 +7,19 @@
 
 "Vision":
   color: "#009f36"
+
+"ICLR2025":
+  color: "#999999"
+  url: https://www.iclr.cc/Conferences/2025
+
+"BMVC2025":
+  color: "#4B0082"
+  url: https://bmvc2025.bmva.org/
+
+"ACCV2024":
+  color: "#1A237E"
+  url: https://openaccess.thecvf.com/ACCV2024
+
+"MICCAI2022":
+  color: "#1A237E"
+  url: https://conferences.miccai.org/2022/en/
