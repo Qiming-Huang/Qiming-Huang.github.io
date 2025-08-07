@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Starting my PhD at the University of Birmingham, School of Computer Science, as a member of the [MIx Group](https://mix.jianbojiao.com/) under the supervision of Prof. [Jianbo Jiao](https://jianbojiao.com/).
+Starting my PhD at the School of Computer Science, University of Birmingham.

@@ -1,30 +1,62 @@
 {
   "basics": {
-    "name": "Qiming",
+    "name": "Qiming Huang",
     "label": "PhD student",
     "image": "",
     "email": "qxh366@student.bham.ac.uk"
   },
   "education": [
     {
-      "institution": "University of Birmingham",
+      "institution": "Ph.D. Computer Science",
       "location": "Birmingham, UK",
       "url": "https://www.birmingham.ac.uk/",
-      "studyType": "Ph.D.",
+      "studyType": "University of Birmingham",
       "startDate": "2023-09",
-      "endDate": "",
-      "score": "10",
-      "courses": ["Computer Science"]
+      "endDate": "-",
+      "score": "10"
     },    
     {
-      "institution": "Xi’anJiaotong-Liverpool University / University of Liverpool",
+      "institution": "B.Eng. Data Science",
       "location": "Suzhou, China",
       "url": "https://www.xjtlu.edu.cn/en",
-      "studyType": "B.Eng.",
+      "studyType": "Xi’anJiaotong-Liverpool University / University of Liverpool",
       "startDate": "2019-09",
       "endDate": "2023-07",
-      "score": "10",
-      "courses": ["Data Science"]
+      "score": "10"
+    }
+  ],
+  "work": [
+    {
+      "position": "Undergraduate Research Intern",
+      "name": "MUSIC Lab/RayShape, Shenzhen University",
+      "url": "https://example.com",
+      "startDate": "2022-07",
+      "endDate": "2022-10",
+      "location": "Shenzhen, China",
+      "summary": "Topic: Transferability Metric in Representation Learning",
+      "highlights": ["supervised by Prof. <a href='https://xy0806.github.io/'>Xin Yang</a>"]
+    },
+    {
+      "position": "Undergraduate Research Intern",
+      "name": "MIP Lab, East China Normal University",
+      "url": "https://example.com",
+      "location": "Suzhou, China",
+      "startDate": "2021-05",
+      "endDate": "2022-07",
+      "summary": "Topic: Ultrasonic image analysis with deep learning",
+      "highlights": ["supervised by Prof. <a href='https://faculty.ecnu.edu.cn/_s15/cjg2_en/main.psp'>Jiangang Chen</a>"]
+    }    
+  ],
+  "awards": [
+    {
+      "title": "PhD Studentship",
+      "date": "2023",
+      "awarder": "School of Computer Science, University of Birmingham"
+    },
+    {
+      "title": " Chinese Scholarship Council (CSC)",
+      "date": "2024",
+      "awarder": "Chinese Government Scholarships"
     }
   ]
 }

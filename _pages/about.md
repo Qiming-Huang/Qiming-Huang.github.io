@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Second-year PhD student from <a href="http://mix.jianbojiao.com/">The MIx Group @ University of Birmingham</a>
+subtitle: <a href="http://mix.jianbojiao.com/">The MIx Group @ University of Birmingham</a>
 
 profile:
   align: right
@@ -33,4 +33,8 @@ Put your address / P.O. box / other info right below your picture. You can also 
 
 Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
 
-Second-year PhD student at MIx group, School of Computer Science, University of Birmingham, supervised by Prof. Jianbo Jiao.
+I am a second-year PhD student in the MIx Group at the School of Computer Science, [University of Birmingham](https://www.birmingham.ac.uk/), under the supervision of Prof. [Jianbo Jiao](https://jianbojiao.com/).
+
+Prior to this, I received my Bachelor's degree from [Xi’an Jiaotong-Liverpool University](https://www.xjtlu.edu.cn/en/) in 2023.
+
+My research interests focus on open-world learning and multi-modal learning, particularly in the intersection of vision and language.
