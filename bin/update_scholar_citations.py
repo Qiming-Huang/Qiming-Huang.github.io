@@ -3,123 +3,107 @@
 Script to fetch citation counts from Google Scholar and store them in _data/citations.yml
 This script is designed to be run by a GitHub Action.
 
-from https://github.com/BernardoCama/BernardoCama.github.io/blob/main/bin/update_scholar_citations.py
+modified from https://github.com/BernardoCama/BernardoCama.github.io/blob/main/bin/update_scholar_citations.py
+"""
+
+#!/usr/bin/env python3
+"""
+Script to fetch citation counts from Google Scholar using SerpAPI
+and store them in _data/citations.yml
 """
 
 import os
 import yaml
 import time
-import random
+import requests
 from datetime import datetime
-from scholarly import scholarly
 
 # Configuration
-SCHOLAR_USER_ID = "hv9vhhAAAAAJ"  # Your Google Scholar ID
+SCHOLAR_USER_ID = "hv9vhhAAAAAJ"  # Replace with your Google Scholar ID
 OUTPUT_FILE = "_data/citations.yml"
-MAX_RETRIES = 3
+SERPAPI_API_KEY = os.getenv("SERPAPI_API_KEY")
+SERPAPI_BASE_URL = "https://serpapi.com/search.json"
 
 # Create data directory if it doesn't exist
 os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 
-def get_scholar_citations():
-    """
-    Fetch citation data from Google Scholar for all papers by the specified author
-    """
-    print(f"Fetching citations for Google Scholar ID: {SCHOLAR_USER_ID}")
-    
-    # Initialize citation data structure
-    citation_data = {
-        'metadata': {
-            'last_updated': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        },
-        'papers': {}  # Initialize as empty dict, not None
-    }
-    
-    # Try to load existing data first to avoid unnecessary requests
-    if os.path.exists(OUTPUT_FILE):
-        try:
-            with open(OUTPUT_FILE, 'r') as f:
-                existing_data = yaml.safe_load(f)
-                if existing_data and isinstance(existing_data, dict):
-                    # Keep existing metadata if available
-                    if 'papers' in existing_data and existing_data['papers'] is not None:
-                        citation_data['papers'] = existing_data['papers']
-        except Exception as e:
-            print(f"Warning: Could not read existing citation data: {e}")
 
-    # Fetch author data with retries
-    author_data = None
-    for attempt in range(MAX_RETRIES):
-        try:
-            author = scholarly.search_author_id(SCHOLAR_USER_ID)
-            author_data = scholarly.fill(author)
-            break
-        except Exception as e:
-            wait_time = (2 ** attempt) + random.uniform(0, 1)  # Exponential backoff
-            print(f"Attempt {attempt + 1}/{MAX_RETRIES} failed: {e}")
-            if attempt < MAX_RETRIES - 1:
-                print(f"Retrying in {wait_time:.1f} seconds...")
-                time.sleep(wait_time)
-            else:
-                print("All retries failed. Using existing data if available.")
-                return citation_data
-    
-    if not author_data:
-        print("Could not fetch author data")
-        return citation_data
-        
-    # Process publications
-    if 'publications' in author_data:
-        for pub in author_data['publications']:
-            try:
-                # Get publication ID
-                pub_id = None
-                if 'pub_id' in pub and pub['pub_id']:
-                    pub_id = pub['pub_id']
-                elif 'author_pub_id' in pub and pub['author_pub_id']:
-                    pub_id = pub['author_pub_id']
-                
-                if not pub_id:
-                    print(f"Warning: No ID found for publication: {pub.get('bib', {}).get('title', 'Unknown')}")
-                    continue
-                
-                # Get publication metadata
-                title = "Unknown Title"
-                year = "Unknown Year"
-                citations = 0
-                
-                if 'bib' in pub:
-                    if 'title' in pub['bib']:
-                        title = pub['bib']['title']
-                    if 'pub_year' in pub['bib']:
-                        year = pub['bib']['pub_year']
-                
-                if 'num_citations' in pub:
-                    citations = pub['num_citations']
-                
-                print(f"Found: {title} ({year}) - Citations: {citations}")
-                
-                # Store citation data
-                citation_data['papers'][pub_id] = {
-                    'title': title,
-                    'year': year,
-                    'citations': citations
-                }
-                
-            except Exception as e:
-                print(f"Error processing publication: {str(e)}")
-    else:
-        print("No publications found in author data")
-    
-    # Save to YAML file
+def log(msg):
+    print(f"[{datetime.now()}] {msg}", flush=True)
+
+
+def get_author_data(user_id):
+    """Fetch author profile and publications from SerpAPI"""
+    params = {
+        "engine": "google_scholar_author",
+        "author_id": user_id,
+        "api_key": SERPAPI_API_KEY,
+        "num": 100  # Fetch up to 100 publications
+    }
+
     try:
-        with open(OUTPUT_FILE, 'w') as f:
-            yaml.dump(citation_data, f, default_flow_style=False, sort_keys=False)
-        print(f"Citation data saved to {OUTPUT_FILE}")
+        log(f"Requesting author data from SerpAPI for ID {user_id}...")
+        response = requests.get(SERPAPI_BASE_URL, params=params, timeout=30)
+        response.raise_for_status()
+        return response.json()
     except Exception as e:
-        print(f"Error saving citation data: {str(e)}")
-    
+        log(f"Error fetching data from SerpAPI: {e}")
+        return None
+
+
+def parse_author_data(data):
+    """Parse the SerpAPI response into our citation format"""
+    citation_data = {
+        "metadata": {
+            "last_updated": datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        },
+        "papers": {}
+    }
+
+    publications = data.get("articles", [])
+    log(f"Found {len(publications)} publications.")
+
+    for pub in publications:
+        try:
+            pub_id = pub.get("article_id", pub.get("title", "unknown").lower().replace(" ", "_")[:20])
+            title = pub.get("title", "Unknown Title")
+            year = pub.get("year", "Unknown Year")
+            citations = pub.get("cited_by", {}).get("value", 0)
+
+            log(f"Processing: {title} ({year}) - Citations: {citations}")
+            citation_data["papers"][pub_id] = {
+                "title": title,
+                "year": year,
+                "citations": citations
+            }
+        except Exception as e:
+            log(f"Error processing publication: {e}")
+            continue
+
     return citation_data
 
+
+def save_to_yaml(data, output_path):
+    try:
+        with open(output_path, 'w') as f:
+            yaml.dump(data, f, default_flow_style=False, sort_keys=False)
+        log(f"Citation data saved to {output_path}")
+    except Exception as e:
+        log(f"Error saving YAML: {e}")
+
+
+def main():
+    if not SERPAPI_API_KEY:
+        log("Error: SERPAPI_API_KEY is not set in environment variables.")
+        return
+
+    data = get_author_data(SCHOLAR_USER_ID)
+    if data:
+        citation_data = parse_author_data(data)
+        save_to_yaml(citation_data, OUTPUT_FILE)
+    else:
+        log("No data retrieved from SerpAPI.")
+
+
 if __name__ == "__main__":
-    get_scholar_citations()
+    main()
