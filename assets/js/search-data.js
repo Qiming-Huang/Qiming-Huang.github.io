@@ -391,8 +391,8 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-starting-my-phd-at-the-university-of-birmingham-school-of-computer-science-as-a-member-of-the-mix-group-under-the-supervision-of-prof-jianbo-jiao",
-          title: 'Starting my PhD at the University of Birmingham, School of Computer Science, as...',
+            },},{id: "news-starting-my-phd-at-the-school-of-computer-science-university-of-birmingham",
+          title: 'Starting my PhD at the School of Computer Science, University of Birmingham.',
           description: "",
           section: "News",},{id: "news-one-paper-is-accepted-to-iclr2025",
           title: 'One paper is accepted to ICLR2025!',
