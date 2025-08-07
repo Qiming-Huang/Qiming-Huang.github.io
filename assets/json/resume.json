@@ -7,19 +7,19 @@
   },
   "education": [
     {
-      "institution": "Ph.D. Computer Science",
+      "institution": "University of Birmingham",
       "location": "Birmingham, UK",
       "url": "https://www.birmingham.ac.uk/",
-      "studyType": "University of Birmingham",
+      "studyType": "Ph.D. Computer Science",
       "startDate": "2023-09",
       "endDate": "-",
       "score": "10"
     },    
     {
-      "institution": "B.Eng. Data Science",
+      "institution": "Xi’anJiaotong-Liverpool University / University of Liverpoole",
       "location": "Suzhou, China",
       "url": "https://www.xjtlu.edu.cn/en",
-      "studyType": "Xi’anJiaotong-Liverpool University / University of Liverpool",
+      "studyType": "B.Eng. Data Science",
       "startDate": "2019-09",
       "endDate": "2023-07",
       "score": "10"
