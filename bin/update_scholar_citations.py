@@ -65,10 +65,10 @@ def parse_author_data(data):
 
     for pub in publications:
         try:
-            pub_id = pub.get("article_id", pub.get("title", "unknown").lower().replace(" ", "_")[:20])
+            pub_id = pub['citation_id']
             title = pub.get("title", "Unknown Title")
             year = pub.get("year", "Unknown Year")
-            citations = pub.get("cited_by", {}).get("value", 0)
+            citations = pub.get("cited_by", {}).get("value", 0) or 0
 
             log(f"Processing: {title} ({year}) - Citations: {citations}")
             citation_data["papers"][pub_id] = {
