@@ -1,0 +1,30 @@
+metadata:
+  last_updated: '2025-08-07 06:54:17'
+papers:
+  stepwise_feature_fus:
+    title: 'Stepwise Feature Fusion: Local Guides Global'
+    year: '2022'
+    citations: 0
+  duat:_dual-aggregati:
+    title: 'DuAT: Dual-aggregation transformer network for medical image segmentation'
+    year: '2023'
+    citations: 0
+  automatic_detection_:
+    title: "Automatic detection of A\u2010line in lung ultrasound images using deep\
+      \ learning and image processing"
+    year: '2023'
+    citations: 0
+  atrial_septal_defect:
+    title: Atrial septal defect detection in children based on ultrasound video using
+      multiple instances learning
+    year: '2024'
+    citations: 0
+  revisit_the_open_nat:
+    title: Revisit the open nature of open vocabulary segmentation
+    year: '2025'
+    citations: 0
+  few_exemplar-based_g:
+    title: Few Exemplar-Based General Medical Image Segmentation via Domain-Aware
+      Selective Adaptation
+    year: '2024'
+    citations: 0
