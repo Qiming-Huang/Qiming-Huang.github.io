@@ -37,6 +37,18 @@
   - firstname: ["Jianbo", "Jiao"]
     url: https://jianbojiao.com/
 
+"lin":
+  - firstname: ["Dongheng", "Lin"]
+    url: https://rathgrith.github.io/
+
 "hu":
   - firstname: ["Han, Hu", "Han", "Hu"]
     url: https://scholar.google.com/citations?hl=zh-CN&view_op=list_works&gmla=ALUCkoXDRY1FyBSlDC4q0bpK9zpnxnhaf2PzJqv2dgVESTCALg71TCdFa7PGpFqiTrWvhnZalzAY234KBYkLCs4O7U4&user=UJRtTJ0AAAAJ
+
+"chang":
+  - firstname: ["Hyung Jin", "H. J.", "Hyung"]
+    url: https://hyungjinchang.wordpress.com/
+
+"hou":
+  - first_name: ["Yuqi", "Hou"]
+    url: https://scholar.google.com/citations?user=AoISz-oAAAAJ&hl=en

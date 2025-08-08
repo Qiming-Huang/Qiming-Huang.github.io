@@ -27,24 +27,20 @@
   ],
   "work": [
     {
-      "position": "Undergraduate Research Intern",
+      "position": "Research Intern",
       "name": "MUSIC Lab/RayShape, Shenzhen University",
-      "url": "https://example.com",
       "startDate": "2022-07",
       "endDate": "2022-10",
       "location": "Shenzhen, China",
-      "summary": "Topic: Transferability Metric in Representation Learning",
-      "highlights": ["supervised by Prof. <a href='https://xy0806.github.io/'>Xin Yang</a>"]
+      "highlights": ["Topic: Transferability Metric in Representation Learning", "supervised by Prof. <a href='https://xy0806.github.io/'>Xin Yang</a>"]
     },
     {
-      "position": "Undergraduate Research Intern",
+      "position": "Research Intern",
       "name": "MIP Lab, East China Normal University",
-      "url": "https://example.com",
       "location": "Suzhou, China",
       "startDate": "2021-05",
       "endDate": "2022-07",
-      "summary": "Topic: Ultrasonic image analysis with deep learning",
-      "highlights": ["supervised by Prof. <a href='https://faculty.ecnu.edu.cn/_s15/cjg2_en/main.psp'>Jiangang Chen</a>"]
+      "highlights": ["Topic: Ultrasonic Image Analysis with Deep Learning", "supervised by Prof. <a href='https://faculty.ecnu.edu.cn/_s15/cjg2_en/main.psp'>Jiangang Chen</a>"]
     }    
   ],
   "awards": [
