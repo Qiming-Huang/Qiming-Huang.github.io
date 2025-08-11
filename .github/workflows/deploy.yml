@@ -6,6 +6,7 @@ on:
       - master
       - main
     paths:
+      - "_data/citations.yml"
       - "assets/**"
       - "_sass/**"
       - "_scripts/**"
