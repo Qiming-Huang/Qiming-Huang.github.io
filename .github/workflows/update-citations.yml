@@ -31,6 +31,15 @@ jobs:
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
-          git add _data/citations.yml
-          git commit -m "Update citations [CI]" || echo "No changes to commit"
-          git push
+          if git diff --quiet HEAD -- _data/citations.yml; then
+            echo "No changes in _data/citations.yml, skip commit & push."
+          else
+            git add _data/citations.yml
+            git commit -m "Update citations [CI]"
+            git push
+          fi
+  deploy:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Run deploy (or your follow-up steps) here."
