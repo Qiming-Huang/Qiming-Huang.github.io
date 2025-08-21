@@ -39,7 +39,7 @@ jobs:
             git push
           fi
   deploy:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ success() }}
     runs-on: ubuntu-latest
     steps:
       - run: echo "Run deploy (or your follow-up steps) here."
