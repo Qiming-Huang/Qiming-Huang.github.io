@@ -251,14 +251,7 @@
         <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" style="text-transform: none;" style="text-transform: none;" role="button">Project Page</a>
       {% endif %}
       {% if entry.dataset %}
-        <a href="{{ entry.dataset }}" 
-          class="btn btn-sm z-depth-0" 
-          style="text-transform: none; background-color: #ffcc4d; padding: 4px 8px; border-radius: 6px; display: inline-flex; align-items: center;" 
-          role="button">
-          <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" 
-                alt="Hugging Face" 
-                style="height:20px;"> Dataset
-        </a>        
+        <a href="{{ entry.dataset }}" class="btn btn-sm z-depth-0" style="text-transform: none;" role="button">Dataset</a>        
       {% endif %}      
     </div>
     {% if site.enable_publication_badges %}
