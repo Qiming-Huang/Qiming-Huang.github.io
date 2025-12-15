@@ -1,14 +1,14 @@
 metadata:
-  last_updated: '2025-12-08 01:42:24'
+  last_updated: '2025-12-15 01:47:41'
 papers:
   hv9vhhAAAAAJ:u5HHmVD_uO8C:
     title: 'Stepwise Feature Fusion: Local Guides Global'
     year: '2022'
-    citations: 355
+    citations: 357
   hv9vhhAAAAAJ:IjCSPb-OGe4C:
     title: 'DuAT: Dual-aggregation transformer network for medical image segmentation'
     year: '2023'
-    citations: 216
+    citations: 218
   hv9vhhAAAAAJ:u-x6o8ySG0sC:
     title: "Automatic detection of A\u2010line in lung ultrasound images using deep\
       \ learning and image processing"
@@ -19,6 +19,10 @@ papers:
       multiple instances learning
     year: '2024'
     citations: 12
+  hv9vhhAAAAAJ:ufrVoPGSRksC:
+    title: Revisit the open nature of open vocabulary segmentation
+    year: '2025'
+    citations: 1
   hv9vhhAAAAAJ:UebtZRa9Y70C:
     title: Structure-Aware Feature Rectification with Region Adjacency Graphs for
       Training-free Open-Vocabulary Semantic Segmentation
@@ -31,10 +35,6 @@ papers:
   hv9vhhAAAAAJ:roLk4NBRz8UC:
     title: What can we learn from Harry Potter? An Exploratory Study of Visual Representation
       Learning from Atypical Videos
-    year: '2025'
-    citations: 0
-  hv9vhhAAAAAJ:ufrVoPGSRksC:
-    title: Revisit the open nature of open vocabulary segmentation
     year: '2025'
     citations: 0
   hv9vhhAAAAAJ:YsMSGLbcyi4C:
