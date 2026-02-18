@@ -92,6 +92,8 @@ layout: default
               <h3 class="card-title font-weight-medium">
                 {% if data[0] == 'work' %}
                   Experience
+                {% elsif data[0] == 'teaching' %}
+                  Teaching
                 {% else %}
                   {{ data[0] | capitalize }}
                 {% endif %}
@@ -104,6 +106,8 @@ layout: default
                   {% include resume/education.liquid %}
                 {% when 'work' %}
                   {% include resume/work.liquid %}
+                {% when 'teaching' %}
+                  {% include resume/teaching.liquid %}
                 {% when 'experience' %}
                   {% include resume/experience.liquid %}
                 {% when 'volunteer' %}
