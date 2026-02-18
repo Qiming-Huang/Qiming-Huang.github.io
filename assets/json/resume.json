@@ -16,7 +16,7 @@
       "score": "10"
     },    
     {
-      "institution": "Xi’anJiaotong-Liverpool University / University of Liverpoole",
+      "institution": "Xi’anJiaotong-Liverpool University / University of Liverpool",
       "location": "Suzhou, China",
       "url": "https://www.xjtlu.edu.cn/en",
       "studyType": "B.Eng. Data Science",
@@ -28,11 +28,19 @@
   "work": [
     {
       "position": "Research Intern",
+      "name": "Samsung R&D Institute UK (SRUK)",
+      "startDate": "2025-09",
+      "endDate": "2025-12",
+      "location": "London, UK",
+      "highlights": ["Supervised by: <a href='https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=iK1PqR4AAAAJ&sortby=pubdate'>Savas Ozkan</a> and Sinan Mutlu"]
+    },    
+    {
+      "position": "Research Intern",
       "name": "MUSIC Lab/RayShape, Shenzhen University",
       "startDate": "2022-07",
       "endDate": "2022-10",
       "location": "Shenzhen, China",
-      "highlights": ["Topic: Transferability Metric in Representation Learning", "supervised by Prof. <a href='https://xy0806.github.io/'>Xin Yang</a>"]
+      "highlights": ["Topic: Transferability Metric in Representation Learning", "Supervised by Prof. <a href='https://xy0806.github.io/'>Xin Yang</a>"]
     },
     {
       "position": "Research Intern",
@@ -40,7 +48,7 @@
       "location": "Suzhou, China",
       "startDate": "2021-05",
       "endDate": "2022-07",
-      "highlights": ["Topic: Ultrasonic Image Analysis with Deep Learning", "supervised by Prof. <a href='https://faculty.ecnu.edu.cn/_s15/cjg2_en/main.psp'>Jiangang Chen</a>"]
+      "highlights": ["Topic: Ultrasonic Image Analysis with Deep Learning", "Supervised by Prof. <a href='https://faculty.ecnu.edu.cn/_s15/cjg2_en/main.psp'>Jiangang Chen</a>"]
     }    
   ],
   "awards": [
