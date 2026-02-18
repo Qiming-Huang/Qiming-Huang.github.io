@@ -205,21 +205,31 @@
         {% if entry.html contains '://' %}
           <a href="{{ entry.html }}" class="btn btn-sm z-depth-0" style="text-transform: none;" role="button">Paper</a>
         {% else %}
-          <a href="{{ entry.html | prepend: '/assets/html/' | relative_url }}" class="btn btn-sm z-depth-0" style="text-transform: none;" role="button">HTML</a>
+          <a
+            href="{{ entry.html | prepend: '/assets/html/' | relative_url }}"
+            class="btn btn-sm z-depth-0"
+            style="text-transform: none;"
+            role="button"
+            >HTML</a
+          >
         {% endif %}
       {% endif %}
       {% if entry.pdf %}
         {% if entry.pdf contains '://' %}
           <a href="{{ entry.pdf }}" class="btn btn-sm z-depth-0" style="text-transform: none;" role="button">PDF</a>
         {% else %}
-          <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" style="text-transform: none;" role="button">PDF</a>
+          <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" style="text-transform: none;" role="button"
+            >PDF</a
+          >
         {% endif %}
       {% endif %}
       {% if entry.supp %}
         {% if entry.supp contains '://' %}
           <a href="{{ entry.supp }}" class="btn btn-sm z-depth-0" style="text-transform: none;" role="button">Supp</a>
         {% else %}
-          <a href="{{ entry.supp | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" style="text-transform: none;" role="button">Supp</a>
+          <a href="{{ entry.supp | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" style="text-transform: none;" role="button"
+            >Supp</a
+          >
         {% endif %}
       {% endif %}
       {% if entry.video and site.enable_video_embedding %}
@@ -237,22 +247,36 @@
         {% if entry.poster contains '://' %}
           <a href="{{ entry.poster }}" class="btn btn-sm z-depth-0" style="text-transform: none;" role="button">Poster</a>
         {% else %}
-          <a href="{{ entry.poster | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" style="text-transform: none;" role="button">Poster</a>
+          <a
+            href="{{ entry.poster | prepend: '/assets/pdf/' | relative_url }}"
+            class="btn btn-sm z-depth-0"
+            style="text-transform: none;"
+            role="button"
+            >Poster</a
+          >
         {% endif %}
       {% endif %}
       {% if entry.slides %}
         {% if entry.slides contains '://' %}
           <a href="{{ entry.slides }}" class="btn btn-sm z-depth-0" style="text-transform: none;" role="button">Slides</a>
         {% else %}
-          <a href="{{ entry.slides | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" style="text-transform: none;" role="button">Slides</a>
+          <a
+            href="{{ entry.slides | prepend: '/assets/pdf/' | relative_url }}"
+            class="btn btn-sm z-depth-0"
+            style="text-transform: none;"
+            role="button"
+            >Slides</a
+          >
         {% endif %}
       {% endif %}
       {% if entry.website %}
-        <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" style="text-transform: none;" style="text-transform: none;" role="button">Project Page</a>
+        <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" style="text-transform: none;" style="text-transform: none;" role="button"
+          >Project Page</a
+        >
       {% endif %}
       {% if entry.dataset %}
-        <a href="{{ entry.dataset }}" class="btn btn-sm z-depth-0" style="text-transform: none;" role="button">Dataset</a>        
-      {% endif %}      
+        <a href="{{ entry.dataset }}" class="btn btn-sm z-depth-0" style="text-transform: none;" role="button">Dataset</a>
+      {% endif %}
     </div>
     {% if site.enable_publication_badges %}
       {% assign entry_has_altmetric_badge = false %}
@@ -318,9 +342,9 @@
               role="button"
             >
               {% assign citation_count = 0 %}
-              {% assign scholar_id_key = site.data.socials.scholar_userid | append: ":" | append: entry.google_scholar_id %}
+              {% assign scholar_id_key = site.data.socials.scholar_userid | append: ':' | append: entry.google_scholar_id %}
               {% assign publication_key = entry.google_scholar_id %}
-              
+
               {% if site.data.citations.papers[scholar_id_key] %}
                 {% assign citation_count = site.data.citations.papers[scholar_id_key].citations %}
               {% elsif site.data.citations.papers[publication_key] %}
@@ -334,7 +358,7 @@
                   {% endif %}
                 {% endfor %}
               {% endif %}
-              
+
               <img
                 src="https://img.shields.io/badge/scholar-{{ citation_count }}-4285F4?logo=googlescholar&labelColor=beige"
                 alt="{{ citation_count }} Google Scholar citations"

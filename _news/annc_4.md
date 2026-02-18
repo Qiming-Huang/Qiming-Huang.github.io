@@ -20,4 +20,3 @@ Please participate in the <a href="https://x360dataset.github.io/BinEgo-360/#cha
   <a href="https://docs.google.com/forms/d/e/1FAIpQLSdn7KkKTgor_0Q0zb4BGnx20emAilCEgp4USDemS6mnWRUxPA/viewform" style="color:#00A6D6; font-weight: bold;">present your papers</a>! 🔥🔥🔥
 </div>
 </s>
-
