@@ -6,6 +6,17 @@ div.container-link-button {
   margin-right: 0.5rem;
 }
 
+a.cv-title-link {
+  color: var(--global-theme-color);
+  text-decoration: none;
+}
+
+a.cv-title-link:hover {
+  color: var(--global-theme-color);
+  text-decoration: none;
+  opacity: 0.85;
+}
+
 table.table-cv {
   background-color: transparent !important;
 

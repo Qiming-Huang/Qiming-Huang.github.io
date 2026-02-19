@@ -61,14 +61,16 @@
   ],
   "teaching": [
     {
-      "position": "Teaching Assistant",
-      "name": "School of Computer Science, University of Birmingham",
-      "startDate": "2024-09",
-      "endDate": "2025-01",
-      "location": "Birmingham, UK",
-      "highlights": [
-        "Assisted course delivery, lab sessions, and student Q&A."
-      ]
+      "course": "Game Theory [40088, 40093]",
+      "uni": "University of Birmingham",
+      "year": "2026",
+      "role": "Teaching Assistant"
+    },
+    {
+      "course": "Computer Vision and Imaging [30213, 30241]",
+      "uni": "University of Birmingham",
+      "year": "2025",
+      "role": "Teaching Assistant"
     }
   ],
   "awards": [
