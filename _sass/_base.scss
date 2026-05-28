@@ -743,7 +743,7 @@ footer.sticky-bottom {
 
         abbr {
           display: inline-block;
-          background-color: var(--global-theme-color);
+          background-color: #999999;
           margin-bottom: 0.5rem;
           color: var(--global-card-bg-color) !important;
 
@@ -810,6 +810,22 @@ footer.sticky-bottom {
         }
         a.award.btn {
           border-color: var(--global-highlight-color);
+        }
+
+        .conference-icon-link,
+        .conference-icon-wrapper {
+          display: inline-flex;
+          align-items: center;
+          min-height: calc(1.5em + 0.5rem + 2px);
+          margin-left: 0.25rem;
+          vertical-align: middle;
+        }
+
+        .conference-icon {
+          display: block;
+          max-width: 4.5rem;
+          max-height: 1.75rem;
+          object-fit: contain;
         }
       }
 

@@ -5,16 +5,7 @@
     <div class="col col-sm-2 abbr">
       {%- if entry.abbr -%}
         {%- if site.data.venues[entry.abbr] -%}
-          {% assign venue_style = null %}
-          {% if site.data.venues[entry.abbr].color != blank %}
-            {% assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' %}
-          {%- endif -%}
-          <abbr
-            class="badge rounded w-100"
-            {% if venue_style %}
-              {{ venue_style }}
-            {% endif -%}
-          >
+          <abbr class="badge rounded w-100">
             {% if site.data.venues[entry.abbr].url %}
               <a href="{{ site.data.venues[entry.abbr].url }}">{{ entry.abbr }}</a>
             {% else %}
@@ -276,6 +267,32 @@
       {% endif %}
       {% if entry.dataset %}
         <a href="{{ entry.dataset }}" class="btn btn-sm z-depth-0" style="text-transform: none;" role="button">Dataset</a>
+      {% endif %}
+      {% if entry.conference %}
+        {% assign conference_icon_first_char = entry.conference | slice: 0 %}
+        {% assign conference_icon_is_remote = false %}
+        {% if entry.conference contains '://' %}
+          {% assign conference_icon_is_remote = true %}
+          {% assign conference_icon_path = entry.conference %}
+        {% elsif conference_icon_first_char == '/' %}
+          {% assign conference_icon_path = entry.conference %}
+        {% else %}
+          {% assign conference_icon_path = entry.conference | prepend: '/assets/img/conference/' %}
+        {% endif %}
+        {% capture conference_icon %}
+          <img
+            src="{% if conference_icon_is_remote %}{{ conference_icon_path }}{% else %}{{ conference_icon_path | relative_url }}{% endif %}"
+            class="conference-icon"
+            alt="{% if entry.conference_alt %}{{ entry.conference_alt }}{% else %}Conference{% endif %}"
+          >
+        {% endcapture %}
+        {% if entry.conference_url %}
+          <a href="{{ entry.conference_url }}" class="conference-icon-link" aria-label="{% if entry.conference_alt %}{{ entry.conference_alt }}{% else %}Conference{% endif %}">
+            {{ conference_icon }}
+          </a>
+        {% else %}
+          <span class="conference-icon-wrapper">{{ conference_icon }}</span>
+        {% endif %}
       {% endif %}
     </div>
     {% if site.enable_publication_badges %}
