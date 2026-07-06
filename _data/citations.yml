@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-06-29 03:57:19'
+  last_updated: '2026-07-06 03:33:50'
 papers:
   hv9vhhAAAAAJ:u5HHmVD_uO8C:
     title: 'Stepwise Feature Fusion: Local Guides Global'
@@ -8,7 +8,7 @@ papers:
   hv9vhhAAAAAJ:IjCSPb-OGe4C:
     title: 'DuAT: Dual-aggregation transformer network for medical image segmentation'
     year: '2023'
-    citations: 318
+    citations: 322
   hv9vhhAAAAAJ:u-x6o8ySG0sC:
     title: "Automatic detection of A\u2010line in lung ultrasound images using deep\
       \ learning and image processing"
