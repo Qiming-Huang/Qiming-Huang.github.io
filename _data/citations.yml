@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-07-20 03:40:13'
+  last_updated: '2026-07-27 02:55:07'
 papers:
   hv9vhhAAAAAJ:u5HHmVD_uO8C:
     title: 'Stepwise Feature Fusion: Local Guides Global'
@@ -8,12 +8,12 @@ papers:
   hv9vhhAAAAAJ:IjCSPb-OGe4C:
     title: 'DuAT: Dual-aggregation transformer network for medical image segmentation'
     year: '2023'
-    citations: 330
+    citations: 334
   hv9vhhAAAAAJ:u-x6o8ySG0sC:
     title: "Automatic detection of A\u2010line in lung ultrasound images using deep\
       \ learning and image processing"
     year: '2023'
-    citations: 30
+    citations: 31
   hv9vhhAAAAAJ:UeHWp8X0CEIC:
     title: Atrial septal defect detection in children based on ultrasound video using
       multiple instances learning
@@ -22,7 +22,7 @@ papers:
   hv9vhhAAAAAJ:fQNAKQ3IYiAC:
     title: Automated measurement of optic nerve sheath diameter using ocular ultrasound
       video
-    year: '2026'
+    year: '2025'
     citations: 3
   hv9vhhAAAAAJ:YsMSGLbcyi4C:
     title: Few Exemplar-Based General Medical Image Segmentation via Domain-Aware
