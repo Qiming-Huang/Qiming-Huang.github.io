@@ -1,10 +1,10 @@
 metadata:
-  last_updated: '2026-08-31 04:01:47'
+  last_updated: '2026-09-07 03:12:40'
 papers:
   hv9vhhAAAAAJ:u5HHmVD_uO8C:
     title: 'Stepwise Feature Fusion: Local Guides Global'
     year: '2022'
-    citations: 448
+    citations: 451
   hv9vhhAAAAAJ:IjCSPb-OGe4C:
     title: 'DuAT: Dual-aggregation transformer network for medical image segmentation'
     year: '2023'
