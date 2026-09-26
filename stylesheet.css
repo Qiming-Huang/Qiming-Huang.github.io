@@ -109,27 +109,109 @@ h2 {
   font-size: 32px;
 }
 
-.one {
+.page {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-table,
+.publication-table {
+  width: 100%;
+  border: 0;
+  border-spacing: 0;
+  border-collapse: separate;
+}
+
+.section-block {
+  padding: 20px;
+}
+
+.news-scroll {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.news-icon {
+  width: 22px;
+  height: 22px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.news-icon.samsung-icon {
+  width: 70px;
+  height: 26px;
+  margin-right: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+.news-list li:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.profile-photo {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.publication-image-cell {
+  width: 25%;
+  padding: 20px;
+  vertical-align: middle;
+}
+
+.publication-text-cell {
+  width: 75%;
+  padding: 20px;
+  vertical-align: middle;
+}
+
+.publication-image {
   width: 160px;
-  height: 160px;
-  position: relative;
+  max-width: 100%;
+  height: auto;
 }
 
-.two {
-  width: 160px;
-  height: 160px;
-  position: absolute;
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
-}
-
-.fade {
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
-}
-
-span.highlight {
+.featured-publication {
   background-color: #ffffd0;
+}
+
+footer {
+  padding: 0 20px;
+  text-align: right;
+  font-size: small;
+}
+
+.tib-preview {
+  display: block;
+  position: relative;
+  width: 160px;
+  max-width: 100%;
+  height: 132px;
+}
+
+.tib-preview img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity .2s ease-in-out;
+}
+
+.tib-after {
+  opacity: 0;
+}
+
+.tib-preview:hover .tib-before,
+.tib-preview:focus-visible .tib-before {
+  opacity: 0;
+}
+
+.tib-preview:hover .tib-after,
+.tib-preview:focus-visible .tib-after {
+  opacity: 1;
 }
